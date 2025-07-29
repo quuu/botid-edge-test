@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
-  const secretHeader = request.headers.get("api-secret");
+  const secretHeader = request.headers.get("x-api-secret");
 
   request.headers.forEach((value, key) => {
     console.log(key, value);
