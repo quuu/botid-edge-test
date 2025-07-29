@@ -4,12 +4,9 @@ import { NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
   const secretHeader = request.headers.get("x-api-secret");
 
-  request.headers.forEach((value, key) => {
-    console.log(key, value);
-  });
   console.log(secretHeader);
 
-  if (secretHeader !== process.env.API_SECRET) {
+  if (secretHeader !== process.env.SECRET_KEY) {
     return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
   }
   const random = Math.random() * 100;
