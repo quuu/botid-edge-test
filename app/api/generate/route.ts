@@ -4,7 +4,11 @@ import { NextResponse } from "next/server";
 export async function POST(request: NextRequest) {
   const secretHeader = request.headers.get("api-secret");
 
+  request.headers.forEach((value, key) => {
+    console.log(key, value);
+  });
   console.log(secretHeader);
+
   if (secretHeader !== process.env.API_SECRET) {
     return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
   }
