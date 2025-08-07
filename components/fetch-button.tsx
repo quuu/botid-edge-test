@@ -4,7 +4,7 @@ export default function FetchButton() {
   return (
     <button
       onClick={() => {
-        fetch("/api/post-data", {
+        fetch("/api/generate", {
           method: "POST",
         });
       }}
