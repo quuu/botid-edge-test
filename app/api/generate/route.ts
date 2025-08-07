@@ -1,7 +1,12 @@
+import { checkRateLimit } from "@vercel/firewall";
 import { NextRequest } from "next/server";
 import { NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
+  const { rateLimited } = await checkRateLimit("asdf1234", { request });
+
+  console.log(rateLimited);
+
   const secretHeader = request.headers.get("x-api-secret");
 
   console.log(secretHeader);

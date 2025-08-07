@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@vercel/firewall':
+        specifier: ^1.0.0
+        version: 1.0.0(next@15.4.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
       botid:
         specifier: ^1.4.5
         version: 1.4.5(next@15.4.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
@@ -344,6 +347,15 @@ packages:
 
   '@types/react@19.1.8':
     resolution: {integrity: sha512-AwAfQ2Wa5bCx9WP8nZL2uMZWod7J7/JSplxbTmBQ5ms6QpqNYm672H0Vu9ZVKVngQ+ii4R/byguVEUZQyeg44g==}
+
+  '@vercel/firewall@1.0.0':
+    resolution: {integrity: sha512-7umwUgTV9BvM96YDhYOGEHmDoYoqdg7hdRUe8SahtppyD9zIF6uMA8sJvM53XYIaPSmpyj1nixDioyyJThMyog==}
+    engines: {node: '>= 20'}
+    peerDependencies:
+      next: '*'
+    peerDependenciesMeta:
+      next:
+        optional: true
 
   botid@1.4.5:
     resolution: {integrity: sha512-y+En8M2qD20G4N72A5dZSbtkIW7R0EoYGwK5aQ8hzBVmqPFbIfiOmgL6m3Ec1Ago3jfHWeG29+l520RQCBcEkQ==}
@@ -816,6 +828,10 @@ snapshots:
   '@types/react@19.1.8':
     dependencies:
       csstype: 3.1.3
+
+  '@vercel/firewall@1.0.0(next@15.4.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0))':
+    optionalDependencies:
+      next: 15.4.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
 
   botid@1.4.5(next@15.4.4(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0):
     optionalDependencies:
